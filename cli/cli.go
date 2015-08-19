@@ -115,6 +115,16 @@ func (cli *DogestryCli) getMethod(name string) (func(...string) error, bool) {
 	return method.Interface().(func(...string) error), true
 }
 
+func (cli *DogestryCli) GetRemote(path string) (remote.Remote, error) {
+	if cli.Config.Azure.Active {
+		cli.Config.SetBlobSpec(path)
+		return remote.NewAzureRemote(cli.Config)
+	} else {
+		cli.Config.SetS3URL(path)
+		return remote.NewRemote(cli.Config)
+	}
+}
+
 func (cli *DogestryCli) RunCmd(args ...string) error {
 	if len(args) > 0 {
 		method, exists := cli.getMethod(args[0])

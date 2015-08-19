@@ -32,6 +32,7 @@ var (
 	flPullHosts      pullHosts
 	flLockFile       string
 	flUseMetaService bool
+	flUseAzureBlobs  bool
 )
 
 func init() {
@@ -46,6 +47,7 @@ func init() {
 	flag.Var(&flPullHosts, "pullhosts", "a comma-separated list of docker hosts where the image will be pulled")
 	flag.StringVar(&flLockFile, "lockfile", "", "lockfile to use while executing command, prevents parallel executions")
 	flag.BoolVar(&flUseMetaService, "use-metaservice", false, "use tha AWS metadata service to get credentials")
+	flag.BoolVar(&flUseAzureBlobs, "az", false, "use Azure Blobs as a remote instead of AWS")
 }
 
 func main() {
@@ -67,9 +69,19 @@ func main() {
 
 	args := flag.Args()
 
-	cfg, err := config.NewConfig(flUseMetaService)
-	if err != nil {
-		log.Fatal(err)
+	var cfg config.Config
+	var err error
+
+	if flUseAzureBlobs {
+		cfg, err = config.NewAzureConfig()
+		if err != nil {
+			log.Fatal(err)
+		}
+	} else {
+		cfg, err = config.NewConfig(flUseMetaService)
+		if err != nil {
+			log.Fatal(err)
+		}
 	}
 
 	dogestryCli, err := cli.NewDogestryCli(cfg, flPullHosts)

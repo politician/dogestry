@@ -4,8 +4,6 @@ import (
 	"fmt"
 	"os"
 	"text/tabwriter"
-
-	"github.com/dogestry/dogestry/remote"
 )
 
 const ListHelpMessage string = `  List images on REMOTE.
@@ -29,14 +27,10 @@ func (cli *DogestryCli) CmdList(args ...string) error {
 		os.Exit(2)
 	}
 
-	S3URL := listFlags.Arg(0)
-
 	w := tabwriter.NewWriter(os.Stdout, 0, 4, 2, ' ', 0)
 	defer w.Flush()
 
-	cli.Config.SetS3URL(S3URL)
-
-	r, err := remote.NewRemote(cli.Config)
+	r, err := cli.GetRemote(listFlags.Arg(0))
 	if err != nil {
 		return err
 	}

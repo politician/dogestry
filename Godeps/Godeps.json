@@ -67,6 +67,11 @@
 			"ImportPath": "github.com/rlmcpherson/s3gof3r",
 			"Comment": "v0.4.10-7-ged07ab7",
 			"Rev": "ed07ab7f4c26c61b927fc5e51e80e2d3b40f4470"
-		}
+		},
+                {
+                        "ImportPath": "github.com/MSOpenTech/azure-sdk-for-go/storage",
+			"Comment": "v1.2-222-g99b5c36",
+			"Rev": "99b5c364c7be7088d138aef0afce0b5a70855b03"
+                }
 	]
 }

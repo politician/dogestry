@@ -37,29 +37,25 @@ func (cli *DogestryCli) CmdPush(args ...string) error {
 		os.Exit(2)
 	}
 
-	S3URL := pushFlags.Arg(0)
-	image := pushFlags.Arg(1)
+	r, err := cli.GetRemote(pushFlags.Arg(0))
+	if err != nil {
+		return err
+	}
 
+	image := pushFlags.Arg(1)
 	imageRoot, err := cli.WorkDir(image)
 	if err != nil {
 		return err
 	}
 
-	cli.Config.SetS3URL(S3URL)
-
-	remote, err := remote.NewRemote(cli.Config)
-	if err != nil {
-		return err
-	}
-
 	fmt.Printf("Using docker endpoint for push: %v\n", cli.DockerHost)
-	fmt.Printf("Remote: %v\n", remote.Desc())
+	fmt.Printf("Remote: %v\n", r.Desc())
 
-	if err = cli.exportToFiles(image, remote, imageRoot); err != nil {
+	if err = cli.exportToFiles(image, r, imageRoot); err != nil {
 		return err
 	}
 
-	if err := remote.Push(image, imageRoot); err != nil {
+	if err := r.Push(image, imageRoot); err != nil {
 		fmt.Printf(`{"Status":"error", "Message": "%v"}`+"\n", err.Error())
 		return err
 	}
