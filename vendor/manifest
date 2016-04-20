@@ -2,6 +2,27 @@
 	"version": 0,
 	"dependencies": [
 		{
+			"importpath": "github.com/AdRoll/goamz/aws",
+			"repository": "https://github.com/AdRoll/goamz",
+			"revision": "0c4b4ec49d2da696b3df5cca52cac2302c461db9",
+			"branch": "master",
+			"path": "/aws"
+		},
+		{
+			"importpath": "github.com/AdRoll/goamz/s3",
+			"repository": "https://github.com/AdRoll/goamz",
+			"revision": "0c4b4ec49d2da696b3df5cca52cac2302c461db9",
+			"branch": "master",
+			"path": "/s3"
+		},
+		{
+			"importpath": "github.com/AdRoll/goamz/testutil",
+			"repository": "https://github.com/AdRoll/goamz",
+			"revision": "0c4b4ec49d2da696b3df5cca52cac2302c461db9",
+			"branch": "master",
+			"path": "/testutil"
+		},
+		{
 			"importpath": "github.com/MSOpenTech/azure-sdk-for-go/storage",
 			"repository": "https://github.com/MSOpenTech/azure-sdk-for-go",
 			"revision": "99b5c364c7be7088d138aef0afce0b5a70855b03",
@@ -39,20 +60,6 @@
 			"branch": "HEAD"
 		},
 		{
-			"importpath": "github.com/crowdmob/goamz/aws",
-			"repository": "https://github.com/crowdmob/goamz",
-			"revision": "3a06871fe9fc0281ca90f3a7d97258d042ed64c0",
-			"branch": "HEAD",
-			"path": "/aws"
-		},
-		{
-			"importpath": "github.com/crowdmob/goamz/s3",
-			"repository": "https://github.com/crowdmob/goamz",
-			"revision": "3a06871fe9fc0281ca90f3a7d97258d042ed64c0",
-			"branch": "HEAD",
-			"path": "/s3"
-		},
-		{
 			"importpath": "github.com/fsouza/go-dockerclient",
 			"repository": "https://github.com/fsouza/go-dockerclient",
 			"revision": "4ab0861c397532bcecd34b7c2f650bf6bc087e83",
@@ -77,6 +84,12 @@
 			"branch": "HEAD"
 		},
 		{
+			"importpath": "github.com/pborman/uuid",
+			"repository": "https://github.com/pborman/uuid",
+			"revision": "c55201b036063326c5b1b89ccfe45a184973d073",
+			"branch": "master"
+		},
+		{
 			"importpath": "github.com/rlmcpherson/s3gof3r",
 			"repository": "https://github.com/rlmcpherson/s3gof3r",
 			"revision": "ed07ab7f4c26c61b927fc5e51e80e2d3b40f4470",
@@ -87,6 +100,12 @@
 			"repository": "https://github.com/tobi/airbrake-go",
 			"revision": "a3cdd910a3ffef88a20fbecc10363a520ad61a0a",
 			"branch": "master"
+		},
+		{
+			"importpath": "gopkg.in/check.v1",
+			"repository": "https://gopkg.in/check.v1",
+			"revision": "4f90aeace3a26ad7021961c297b22c42160c7b25",
+			"branch": "v1"
 		}
 	]
 }

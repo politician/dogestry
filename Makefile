@@ -5,5 +5,8 @@ SHELL=/bin/bash
 build:
 	gb build
 
+test:
+	gb test
+
 version: build
 	bin/dogestry version

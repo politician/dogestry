@@ -5,7 +5,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"code.google.com/p/go-uuid/uuid"
+	"github.com/pborman/uuid"
 	"github.com/MSOpenTech/azure-sdk-for-go/storage"
 	"dogestry/config"
 	. "gopkg.in/check.v1"
