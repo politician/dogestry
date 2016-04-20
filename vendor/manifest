@@ -1,0 +1,92 @@
+{
+	"version": 0,
+	"dependencies": [
+		{
+			"importpath": "github.com/MSOpenTech/azure-sdk-for-go/storage",
+			"repository": "https://github.com/MSOpenTech/azure-sdk-for-go",
+			"revision": "99b5c364c7be7088d138aef0afce0b5a70855b03",
+			"branch": "HEAD",
+			"path": "/storage"
+		},
+		{
+			"importpath": "github.com/Sirupsen/logrus",
+			"repository": "https://github.com/Sirupsen/logrus",
+			"revision": "e00ed35f54d331c88f1867a18a7bfc4e4e4685ac",
+			"branch": "HEAD"
+		},
+		{
+			"importpath": "github.com/bugsnag/bugsnag-go",
+			"repository": "https://github.com/bugsnag/bugsnag-go",
+			"revision": "0f2f8c51981c9507be53db10e553d0542498d7ca",
+			"branch": "master"
+		},
+		{
+			"importpath": "github.com/bugsnag/osext",
+			"repository": "https://github.com/bugsnag/osext",
+			"revision": "0dd3f918b21bec95ace9dc86c7e70266cfc5c702",
+			"branch": "master"
+		},
+		{
+			"importpath": "github.com/bugsnag/panicwrap",
+			"repository": "https://github.com/bugsnag/panicwrap",
+			"revision": "d6191e27ad06236eaad65d79e49a08b03b9f8029",
+			"branch": "master"
+		},
+		{
+			"importpath": "github.com/cheggaaa/pb",
+			"repository": "https://github.com/cheggaaa/pb",
+			"revision": "d7729fd7ec1372c15b83db39834bf842bf2d69fb",
+			"branch": "HEAD"
+		},
+		{
+			"importpath": "github.com/crowdmob/goamz/aws",
+			"repository": "https://github.com/crowdmob/goamz",
+			"revision": "3a06871fe9fc0281ca90f3a7d97258d042ed64c0",
+			"branch": "HEAD",
+			"path": "/aws"
+		},
+		{
+			"importpath": "github.com/crowdmob/goamz/s3",
+			"repository": "https://github.com/crowdmob/goamz",
+			"revision": "3a06871fe9fc0281ca90f3a7d97258d042ed64c0",
+			"branch": "HEAD",
+			"path": "/s3"
+		},
+		{
+			"importpath": "github.com/fsouza/go-dockerclient",
+			"repository": "https://github.com/fsouza/go-dockerclient",
+			"revision": "4ab0861c397532bcecd34b7c2f650bf6bc087e83",
+			"branch": "HEAD"
+		},
+		{
+			"importpath": "github.com/getsentry/raven-go",
+			"repository": "https://github.com/getsentry/raven-go",
+			"revision": "e39495fea085e98d1281fac0ff4d6eb8dc56f86d",
+			"branch": "master"
+		},
+		{
+			"importpath": "github.com/jessevdk/go-flags",
+			"repository": "https://github.com/jessevdk/go-flags",
+			"revision": "6b9493b3cb60367edd942144879646604089e3f7",
+			"branch": "master"
+		},
+		{
+			"importpath": "github.com/mitchellh/go-homedir",
+			"repository": "https://github.com/mitchellh/go-homedir",
+			"revision": "7d2d8c8a4e078ce3c58736ab521a40b37a504c52",
+			"branch": "HEAD"
+		},
+		{
+			"importpath": "github.com/rlmcpherson/s3gof3r",
+			"repository": "https://github.com/rlmcpherson/s3gof3r",
+			"revision": "ed07ab7f4c26c61b927fc5e51e80e2d3b40f4470",
+			"branch": "HEAD"
+		},
+		{
+			"importpath": "github.com/tobi/airbrake-go",
+			"repository": "https://github.com/tobi/airbrake-go",
+			"revision": "a3cdd910a3ffef88a20fbecc10363a520ad61a0a",
+			"branch": "master"
+		}
+	]
+}
