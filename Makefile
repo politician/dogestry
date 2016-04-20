@@ -4,3 +4,6 @@ SHELL=/bin/bash
 
 build:
 	gb build
+
+version: build
+	bin/dogestry version
